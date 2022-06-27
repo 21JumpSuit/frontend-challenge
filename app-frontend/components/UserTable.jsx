@@ -1,12 +1,12 @@
 import NoPersons from './NoPersons';
-const UserTable = ({ users }) => {
-    return users && users.length ? (
+const UserTable = ({ displayedUsers: displayedUsers }) => {
+    return displayedUsers && displayedUsers.length ? (
         <table className='border-collapse border border-slate-500'>
             <tr>
                 <th className='border border-slate-500 p-3'>User Name</th>
                 <th className='border border-slate-500 p-3'>User Address</th>
             </tr>
-            {users.map((user, index) => {
+            {displayedUsers.map((user, index) => {
                 return (
                     <tr key={index}>
                         <td className='border border-slate-500 p-3'>
