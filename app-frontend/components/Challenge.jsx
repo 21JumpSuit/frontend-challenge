@@ -2,9 +2,11 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import UserGrid from './UserGrid';
+import UserTable from './UserTable';
 
 const Challenge = () => {
     const [users, setUsers] = useState();
+    const [isTableView, setIsTableView] = useState(false);
 
     const deleteUser = (email) => {
         setUsers(users.filter((user) => user.email !== email));
@@ -22,6 +24,10 @@ const Challenge = () => {
             });
     };
 
+    const switchViews = () => {
+        setIsTableView(!isTableView);
+    };
+
     useEffect(() => {
         fetch('https://randomuser.me/api/?results=10', {
             dataType: 'json',
@@ -37,9 +43,15 @@ const Challenge = () => {
     return (
         <div className='flex flex-wrap items-center justify-around min-w-full mt-6 sm:w-full'>
             <div className='p-6 mt-6 text-left border w-full rounded-xl'>
-                <UserGrid users={users} deleteUser={deleteUser} />
+                {isTableView ? (
+                    <UserTable users={users} />
+                ) : (
+                    <UserGrid users={users} deleteUser={deleteUser} />
+                )}
             </div>
-            <button id='switcher'>Switch Views</button>
+            <button id='switcher' onClick={switchViews}>
+                Switch Views
+            </button>
             <button id='addition' onClick={addUser}>
                 Add User
             </button>

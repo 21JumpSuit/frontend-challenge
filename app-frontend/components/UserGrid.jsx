@@ -1,4 +1,5 @@
 import User from './User';
+import NoPersons from './NoPersons';
 
 const UserGrid = ({ users, deleteUser }) => {
     return users && users.length ? (
@@ -8,7 +9,7 @@ const UserGrid = ({ users, deleteUser }) => {
             })}
         </div>
     ) : (
-        <div>no users found</div>
+        <NoPersons />
     );
 };
 
