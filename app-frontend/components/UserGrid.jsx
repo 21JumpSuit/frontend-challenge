@@ -1,10 +1,10 @@
 import User from './User';
 
-const UserGrid = ({ users }) => {
+const UserGrid = ({ users, deleteUser }) => {
     return users && users.length ? (
         <div className='grid grid-cols-4'>
             {users.map((user, index) => {
-                return <User key={index} user={user} />;
+                return <User key={index} user={user} deleteUser={deleteUser} />;
             })}
         </div>
     ) : (

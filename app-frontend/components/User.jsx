@@ -1,6 +1,6 @@
-const User = ({ user }) => {
+const User = ({ user, deleteUser }) => {
     return user ? (
-        <div className='user-row'>
+        <div className='user-row' onClick={() => deleteUser(user.email)}>
             <img
                 className='photo'
                 src={user.picture.thumbnail}
