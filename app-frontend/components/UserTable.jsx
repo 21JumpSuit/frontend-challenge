@@ -5,7 +5,7 @@ const UserTable = ({
 }) => {
     return displayedUsers && displayedUsers.length ? (
         <table className='border-collapse border border-slate-500 m-auto'>
-            <thead>
+            <thead className='bg-slate-200'>
                 <tr>
                     <th className='border border-slate-500 p-3'>User Name</th>
                     <th className='border border-slate-500 p-3'>
