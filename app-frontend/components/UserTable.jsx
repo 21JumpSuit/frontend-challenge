@@ -1,5 +1,8 @@
 import NoPersons from './NoPersons';
-const UserTable = ({ displayedUsers: displayedUsers }) => {
+const UserTable = ({
+    displayedUsers: displayedUsers,
+    deleteUser: deleteUser,
+}) => {
     return displayedUsers && displayedUsers.length ? (
         <table className='border-collapse border border-slate-500'>
             <tr>
@@ -8,7 +11,7 @@ const UserTable = ({ displayedUsers: displayedUsers }) => {
             </tr>
             {displayedUsers.map((user, index) => {
                 return (
-                    <tr key={index}>
+                    <tr key={index} onClick={() => deleteUser(user.email)}>
                         <td className='border border-slate-500 p-3'>
                             {user.name.title} {user.name.first} {user.name.last}
                         </td>

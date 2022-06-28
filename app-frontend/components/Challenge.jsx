@@ -5,13 +5,14 @@ import UserGrid from './UserGrid';
 import UserTable from './UserTable';
 
 const Challenge = () => {
-    const [allUsers, setAllUsers] = useState();
-    const [displayedUsers, setDisplayedUsers] = useState();
+    const [users, setUsers] = useState({ allUsers: [], displayedUsers: [] });
     const [isTableView, setIsTableView] = useState(false);
 
     const deleteUser = (email) => {
-        setAllUsers(displayedUsers.filter((user) => user.email !== email));
-        setDisplayedUsers(allUsers);
+        const newUserList = users.allUsers.filter(
+            (user) => user.email !== email
+        );
+        setUsers({ allUsers: newUserList, displayedUsers: newUserList });
     };
 
     const addUser = () => {
@@ -22,22 +23,27 @@ const Challenge = () => {
                 return response.json();
             })
             .then((json) => {
-                setAllUsers([...displayedUsers, ...json.results]);
-                setDisplayedUsers(allUsers);
+                const newUserList = [...users.displayedUsers, ...json.results];
+                setUsers({
+                    allUsers: newUserList,
+                    displayedUsers: newUserList,
+                });
             });
     };
 
     const filterUsers = (filterText) => {
-        setDisplayedUsers(
-            allUsers.filter(
-                (user) =>
-                    (user.name.first + user.name.last)
-                        .toString()
-                        .toLowerCase()
-                        .replace(/\s/g, '')
-                        .indexOf(filterText.toLowerCase()) >= 0
-            )
+        const newDisplayedUsers = users.allUsers.filter(
+            (user) =>
+                (user.name.first + user.name.last)
+                    .toString()
+                    .toLowerCase()
+                    .replace(/\s/g, '')
+                    .indexOf(filterText.toLowerCase()) >= 0
         );
+        setUsers({
+            allUsers: users.allUsers,
+            displayedUsers: newDisplayedUsers,
+        });
     };
 
     const switchViews = () => {
@@ -52,8 +58,10 @@ const Challenge = () => {
                 return response.json();
             })
             .then((json) => {
-                setAllUsers(json.results);
-                setDisplayedUsers(allUsers);
+                setUsers({
+                    allUsers: json.results,
+                    displayedUsers: json.results,
+                });
             });
     }, []);
 
@@ -61,10 +69,13 @@ const Challenge = () => {
         <div className='flex flex-wrap items-center justify-around min-w-full mt-6 sm:w-full'>
             <div className='p-6 mt-6 text-left border w-full rounded-xl'>
                 {isTableView ? (
-                    <UserTable displayedUsers={displayedUsers ?? allUsers} />
+                    <UserTable
+                        displayedUsers={users.displayedUsers}
+                        deleteUser={deleteUser}
+                    />
                 ) : (
                     <UserGrid
-                        displayedUsers={displayedUsers ?? allUsers}
+                        displayedUsers={users.displayedUsers}
                         deleteUser={deleteUser}
                     />
                 )}
