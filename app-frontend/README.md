@@ -31,6 +31,12 @@ Finally, we would like you to create an input that filters the displayed users b
 
 In this readme, would like you to roughly explain what React is doing under the box of `<Challenge />` in `/components/Challenge.jsx`. Note that you need not explain anything in the context of NextJs and can just assume a plain React app.
 
+# Answer
+
+At it's most basic, the .jsx file is a bunch of syntactic sugar over the creation of React elements in the virtual DOM, which in turn renders any changes to the actual browser DOM so that they can be painted by the browser.
+
+We're essentially writing a series of javascript objects, scaffolded inside of a much larger, overarching object which contains the entirety of our app, including state and various hooks.
+
 ### Bonus
 
 We recognize that there is room to grow here. Please feel free to tell us a way in which this challenge could be improved.
