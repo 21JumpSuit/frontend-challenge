@@ -80,19 +80,30 @@ const Challenge = () => {
                     />
                 )}
             </div>
-            <div>
-                <label>Filter Users By Name</label>
-                <input
-                    type='text'
-                    onChange={(e) => filterUsers(e.target.value)}
-                ></input>
+            <div className='flex m-3 space-x-4'>
+                <div className='bg-sky-500 p-2 rounded shadow-md shadow-slate-500'>
+                    <label className='mr-1'>Filter Users By Name</label>
+                    <input
+                        className='shadow-inner'
+                        type='text'
+                        onChange={(e) => filterUsers(e.target.value)}
+                    ></input>
+                </div>
+                <button
+                    className='bg-sky-500 p-2 rounded shadow-md shadow-slate-500'
+                    id='switcher'
+                    onClick={switchViews}
+                >
+                    Switch Views
+                </button>
+                <button
+                    className='bg-sky-500 p-2 rounded shadow-md shadow-slate-500'
+                    id='addition'
+                    onClick={addUser}
+                >
+                    Add User
+                </button>
             </div>
-            <button id='switcher' onClick={switchViews}>
-                Switch Views
-            </button>
-            <button id='addition' onClick={addUser}>
-                Add User
-            </button>
         </div>
     );
 };
