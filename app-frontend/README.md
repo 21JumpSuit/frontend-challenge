@@ -31,8 +31,12 @@ Finally, we would like you to create an input that filters the displayed users b
 
 In this readme, would like you to roughly explain what React is doing under the box of `<Challenge />` in `/components/Challenge.jsx`. Note that you need not explain anything in the context of NextJs and can just assume a plain React app.
 
+This is a component and it is one of the core building blocks of React. React takes these components and uses them to build the UI. In this instance React is taking the code in the Challenge.jsx file and displaying that code to the end user through the parent component located in the pages folder.
+
 ### Bonus
 
 We recognize that there is room to grow here. Please feel free to tell us a way in which this challenge could be improved.
+
+This was a wonderful challenge. I have to admit that I had to shake a few cobwebs loose when trying to remember certain things but I really enjoyed it! Also I forgot to fork the repo so all my commits are on a seperate branch on my local directory. If that is needed I can absolutely provide it. As far as improvement there is nothing that comes to mind. Thank you again for the opportunity.
 
 #### You are done!
