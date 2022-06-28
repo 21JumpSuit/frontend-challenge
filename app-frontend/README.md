@@ -8,7 +8,7 @@
 
 ## Introduction
 
-In this challege, you will implement a simple page with two views. Specifically, you will be using the [randomuser]('https://randomuser.me') API to display the information of some random users and delete them, using best practices and avoiding antipatterns. A correctly implemented end result will pass all the tests.
+In this challenge, you will implement a simple page with two views. Specifically, you will be using the [randomuser]('https://randomuser.me') API to display the information of some random users and delete them, using best practices and avoiding antipatterns. A correctly implemented end result will pass all the tests.
 
 **Note that you should not need to edit any file other than** `/components/Challenge.jsx` **for this challenge, but are free to utilize sub-components. You will also not need to use any external libraries to complete the assignment.**
 
