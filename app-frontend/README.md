@@ -31,6 +31,8 @@ Finally, we would like you to create an input that filters the displayed users b
 
 In this readme, would like you to roughly explain what React is doing under the box of `<Challenge />` in `/components/Challenge.jsx`. Note that you need not explain anything in the context of NextJs and can just assume a plain React app.
 
+<Challenge /> is just a component of the React app, index.js imported Challenge.jsx therefore React renders everything inside of 'Challenge.jsx' and display it on index.js
+
 ### Bonus
 
 We recognize that there is room to grow here. Please feel free to tell us a way in which this challenge could be improved.
