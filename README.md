@@ -18,7 +18,7 @@ Please note that this is a simple challenge meant to indicate simple technical g
 
 ## Getting started
 
-To setup the repository for this challenge, you will simply need to create a new branch and begin!
+To setup the repository for this challenge, you will simply need to instantiate the template and later make a ZIP submission via email.
 
 ### Setting up the Environment
 
