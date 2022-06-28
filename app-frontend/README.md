@@ -2,9 +2,9 @@
 
 ## Project Structure
 
-- `components/` - app's components
-- `pages/` - app's pages
-- `pages/api` - app's API routes
+-   `components/` - app's components
+-   `pages/` - app's pages
+-   `pages/api` - app's API routes
 
 ## Introduction
 
@@ -36,3 +36,21 @@ In this readme, would like you to roughly explain what React is doing under the 
 We recognize that there is room to grow here. Please feel free to tell us a way in which this challenge could be improved.
 
 #### You are done!
+
+#### Overview of My Implementation
+
+To start with we define the states we will be using. A users state object holding both the entire list of users and a displayed users list that will contain the users that have not been filtered by name
+
+Next we define functions that will be used to add, delete, and filter Users and the function that will toggle the current page view
+
+Now we use the useEffect hook. this hook is a bit of a swiss army knife replacing lifecycle methods of class based react. In this case we are using it to populate the users state after the component mounts
+
+This sets the stage for our react to proceed. The challenge component houses either of our views based on the current boolean value of isTableView. A state is used so that the page will rerender with the correct view whenever that isTableView value is changed. it further houses some simple html elements such as the buttons and the input needed for User interaction
+
+The userGrid component simply returns a div with the tailwind classes to force a 4 element grid and a map of the currently displayedUsers onto User components. The User component is a dumb component that only spits out html elements with the bare minimum checking for the existence of a user.
+
+The userTable Component is also a relatively simple component just returning html elements. The only complexity here is a map of the displayedUsers to create table rows for each one.
+
+both userGrid and userTable will return the NoPersons component in the case of displayedUsers being empty while the NoPersons component is EXTREMELY simple it does make the entire project much more DRY as code duplication should be avoided for long term maintenance.
+
+because displayedUsers is passed to either view as a prop whenever displayedUser is changed these components will rerender assuring that the correct data is always displayed.
