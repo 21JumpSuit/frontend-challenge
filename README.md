@@ -22,10 +22,10 @@ To setup the repository for this challenge, you will simply need to instantiate 
 
 ### Setting up the Environment
 
-Run `npm install` in the root directory of the project as well as in the `app-frontend` directory to setup your project. Your can then run `npm run dev`, ensuring that your port 3000 is available to begin development. When you are done with these steps, naviage to the `app-frontend` directory and read the README.md file to begin.
+Run `npm install` in the root directory of the project as well as in the `app-frontend` directory to setup your project. Your can then run `npm run dev`, ensuring that your port 3000 is available to begin development. When you are done with these steps, navigate to the `app-frontend` directory and read the README.md file to begin.
 
 Please note that an ideal solution should not take more an hour to complete. If you feel stuck, don't overthink it. Just keep it simple and try to solve the problem.
 
 ## Submitting the challenge
 
-When you have completed the challenge and are ready to submit, please create a pull request to main.
+When you have completed the challenge and are ready to submit, please email your `app-frontend` directory as instructed.
