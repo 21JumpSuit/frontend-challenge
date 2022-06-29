@@ -31,6 +31,8 @@ Finally, we would like you to create an input that filters the displayed users b
 
 In this readme, would like you to roughly explain what React is doing under the box of `<Challenge />` in `/components/Challenge.jsx`. Note that you need not explain anything in the context of NextJs and can just assume a plain React app.
 
+The index page is rendering the Challenge component. In the challenge component, the Change View button toggles between a Grid and Table display of the fetched user data. There is functionality to add up to 10 new users to the existing list of users as well as delete any or all users. Users can be filtered by first name in the input box at the top. 
+
 ### Bonus
 
 We recognize that there is room to grow here. Please feel free to tell us a way in which this challenge could be improved.
