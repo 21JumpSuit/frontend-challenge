@@ -1,3 +1,6 @@
+const Nth = require('tailwindcss-nth-child');
+const plugin = new Nth('odd');
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -8,5 +11,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin.nthChild()
+  ],
 }

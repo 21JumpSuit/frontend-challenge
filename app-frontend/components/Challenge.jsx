@@ -65,7 +65,7 @@ const Challenge = ({ users, setUsers, fetchUserData }) => {
 
 	return (
 		<>
-			<input className='m-10 bg-slate-50 rounded-full py-2 pl-5 pr-10 w-96 outline-none' type='text' placeholder='Search users...' onChange={(e) => setSearchedUser(e.target.value.toLowerCase())} />
+			<input className='m-10 bg-slate-100 rounded-full py-2 pl-5 pr-10 w-96 outline-none' type='text' placeholder='Search users...' onChange={(e) => setSearchedUser(e.target.value.toLowerCase())} />
 			<div className='flex flex-col flex-wrap items-center justify-around min-w-full mt-6 sm:w-full'>
 				{!alternateView ? (
 					<div className='grid grid-cols-4 gap-10'>
