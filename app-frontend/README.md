@@ -31,8 +31,19 @@ Finally, we would like you to create an input that filters the displayed users b
 
 In this readme, would like you to roughly explain what React is doing under the box of `<Challenge />` in `/components/Challenge.jsx`. Note that you need not explain anything in the context of NextJs and can just assume a plain React app.
 
+## Explanation-
+The frontend was coded using TailwindCSS for the resposnive design.
+
+React will render the page with 10 records using the effect hook and only update 2 state variables on button(add another user) click.
+
+2  views are implemented using resuable components (GridUsers and TableUsers), which is seen on the toggle button(true for grid, false for table)
+
+Arrow functions are implemented to handle all events( ) by the user.
+
+Delete will remove the index selectd from the array using the filter function.
 ### Bonus
 
 We recognize that there is room to grow here. Please feel free to tell us a way in which this challenge could be improved.
-
+## Suggestion
+For me it was understanding the views and ID switcher, so a mockup of the design would of been ideal for me.
 #### You are done!
